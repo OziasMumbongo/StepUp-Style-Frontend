@@ -1,0 +1,80 @@
+.productContainer {
+  padding: 40px;
+  background-color: #9dc183;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+padding: 40px 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.productCard {
+  background-color: #f9f7f3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  cursor: pointer;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.image {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background-color: #f8f8f8;
+  padding: 10px;
+}
+
+.productCard h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 10px 15px 5px;
+  color: #222;
+}
+
+.productCard p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 15px;
+}
+
+.productCard p strong {
+  color: #333;
+}
+
+.cartButton {
+  margin: 10px 15px 15px;
+  padding: 10px 15px;
+  background-color: #9dc183;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.cartButton:hover {
+  background-color: #917136;
+}
+

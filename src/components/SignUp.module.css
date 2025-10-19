@@ -1,0 +1,73 @@
+.mainContainer{
+    background-image: url('../../public/KOV07592.jpg');
+    background-size: cover;       /* makes the image cover the area */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat; /* prevents tiling */
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+  background: rgba(78, 62, 40, 0.39);  /* slight dark overlay */
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 0 0 5%;
+  color: white;
+  width: 650px;
+}
+
+.formContainer h1 {
+  font-family: 'Courier New', monospace;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formContainer label {
+  text-align: left;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.signUp_Input {
+  background: linear-gradient(to right, #816005, #ffffff);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.signUp_Input::placeholder{
+  color: #ffffff;
+}
+
+input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.signUp {
+  margin: 10px 0 0 200px;
+  padding: 10px;
+  background: linear-gradient(to right, #000000, #a0821f);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 25%;
+}
+
+.signUp:hover {
+  background: linear-gradient(to right, #0056b3, #3399ff);
+}

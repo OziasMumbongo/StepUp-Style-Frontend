@@ -1,0 +1,103 @@
+.orders-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.orders-page h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.order {
+  border: 1px solid #eee;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* Order Confirmation */
+.order > h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.order > p {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  margin: 5px 0 20px;
+}
+
+/* View order status button */
+.view-status-btn {
+  display: block;
+  margin: 0 auto 30px;
+  padding: 12px 24px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Table Header */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.order-table th,
+.order-table td {
+  text-align: left;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.order-table td img {
+  width: 100px;
+  border: 1px solid #eee;
+}
+
+/* Totals */
+.order-totals {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+.order-totals p {
+  margin: 4px 0;
+}
+
+.order-totals strong {
+  font-size: 16px;
+}
+
+/* Delivery Info */
+.delivery-info {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.delivery-info h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.delivery-info p {
+  margin: 2px 0;
+}

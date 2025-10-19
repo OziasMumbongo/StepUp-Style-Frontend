@@ -1,0 +1,113 @@
+.checkout_page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.checkout_page h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.checkout_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkout_form h2 {
+  font-size: 20px;
+  margin-top: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.checkout_form input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Grouped layout for fullName + address + city + postalCode */
+.checkout_form input[name="fullName"],
+.checkout_form input[name="address"],
+.checkout_form input[name="city"],
+.checkout_form input[name="postalCode"],
+.checkout_form input[name="country"],
+.checkout_form input[name="email"],
+.checkout_form input[name="cardNumber"],
+.checkout_form input[name="cardName"],
+.checkout_form input[name="expiry"],
+.checkout_form input[name="cvv"] {
+  margin-top: 5px;
+}
+
+/* Order Summary */
+.checkout_cart_summary {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: #fafafa;
+  border-radius: 6px;
+}
+
+.checkout_cart_summary h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.checkout_cart_item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.checkout_cart_summary h3 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* Submit Button */
+.place_order_btn {
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+  .checkout_form input {
+    margin-bottom: 15px;
+  }
+
+  .checkout_form {
+    gap: 10px;
+  }
+
+  .checkout_form input[name="expiry"],
+  .checkout_form input[name="cvv"] {
+    width: 48%;
+  }
+
+  .checkout_form .card_details {
+    display: flex;
+    gap: 4%;
+  }
+}
