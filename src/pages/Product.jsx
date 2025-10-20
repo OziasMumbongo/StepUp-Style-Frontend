@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Product.module.css";
 import NavBar from "../components/NavBar";
+const backendUrl = import.meta.env.VITE_BACKENDURL
+
 
 const Product = ({ cart, addToCart }) => {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState(""); // Track search input
 
   useEffect(() => {
-    fetch("http://localhost:3000/Products")
+    fetch(`${backendUrl}/Products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error(err));

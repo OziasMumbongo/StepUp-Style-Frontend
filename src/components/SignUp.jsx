@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './SignUp.module.css'
-const url = import.meta.env.render
+const backendUrl = import.meta.env.VITE_BACKENDURL
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const SignUp = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch(`${url}/Users`, {
+    const response = await fetch(`${backendUrl}/Users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './SignUp.module.css';
+const backendUrl = import.meta.env.VITE_BACKENDURL
+
 
 const Login = ({ setCart, setCurrentUser }) => {
   const [formData, setFormData] = useState({ email: '', password: '', name: '' });
@@ -14,7 +16,7 @@ const Login = ({ setCart, setCurrentUser }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3000/login', {
+      const res = await fetch(`${backendUrl}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

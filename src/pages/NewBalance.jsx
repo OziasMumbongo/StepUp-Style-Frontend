@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Nike.module.css"; // Import the CSS file
 import NavBar from "../components/NavBar";
+const backendUrl = import.meta.env.VITE_BACKENDURL
 
 const NewBalance = ({cart, addToCart}) => {
   const [products, setProducts] = useState([]);
   const category = "New Balance"; // Make dynamic if needed
 
   useEffect(() => {
-    fetch(`http://localhost:3000/Products/category/${category}`)
+    fetch(`${backendUrl}/Products/category/${category}`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching category products:", err));

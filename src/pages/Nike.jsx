@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Nike.module.css";
 import NavBar from "../components/NavBar";
+const backendUrl = import.meta.env.VITE_BACKENDURL
 
 const Nike = ({ cart, addToCart }) => {
   const [products, setProducts] = useState([]);
@@ -8,7 +9,7 @@ const Nike = ({ cart, addToCart }) => {
   const category = "Nike";
 
   useEffect(() => {
-    fetch(`http://localhost:3000/Products/category/${category}`)
+    fetch(`${backendUrl}/Products/category/${category}`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error("Error fetching category products:", err));
