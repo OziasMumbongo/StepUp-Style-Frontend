@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './SignUp.module.css'
+const url = import.meta.env.render
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const SignUp = () => {
   e.preventDefault();
 
   try {
-    const response = await fetch('http://localhost:3000/Users', {
+    const response = await fetch(`${url}/Users`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
