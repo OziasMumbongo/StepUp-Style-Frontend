@@ -26,7 +26,7 @@ const Homepage = ({cart, addToCart }) => {
         </div>
 
         <div className={styles.banner_image}>
-          <img src="/public/nike-air-max-97-neon-shoe-3d-model-b1f03efa21.jpg" alt="shoe" className={styles.nikeAir}/>
+          <img src="/Images/nike-air-max-97-neon-shoe-3d-model-b1f03efa21.jpg" alt="shoe" className={styles.nikeAir}/>
         </div>
       </div>
       <div className={styles.brandSection}>
@@ -34,7 +34,7 @@ const Homepage = ({cart, addToCart }) => {
   <div className={styles.brandsGrid}>
     <Link to="/nike">
     <div className={styles.brandCard}>
-      <img src="/public/02e19efc-36c8-4598-8aaf-b9d7b2382eac1702986853269NikeAirForce107MensShoes1.jpg" alt="Nike" />
+      <img src="/Images/02e19efc-36c8-4598-8aaf-b9d7b2382eac1702986853269NikeAirForce107MensShoes1.jpg" alt="Nike" />
       <h3 className={styles.pairs1}>Nike</h3>
       <Link to="/nike"><button className={styles.shopNow}>Shop Now</button></Link>
     </div>
@@ -42,7 +42,7 @@ const Homepage = ({cart, addToCart }) => {
 
     <Link to="/adidas">
     <div className={styles.brandCard}>
-      <img src="/public/adidas4.jpg" alt="Adidas" />
+      <img src="/Images/adidas4.jpg" alt="Adidas" />
       <h3 className={styles.pairs1}>Adidas</h3>
       <Link to="/adidas"><button className={styles.shopNow}>Shop Now</button></Link>
     </div>
@@ -50,7 +50,7 @@ const Homepage = ({cart, addToCart }) => {
 
     <Link to="newbalance">
     <div className={styles.brandCard}>
-      <img src="/public/image1.png" alt="New Balance" />
+      <img src="/Images/image1.png" alt="New Balance" />
       <h3 className={styles.pairs}>New Balance</h3>
       <Link to="/newbalance"><button className={styles.shopNow2}>Shop Now</button> </Link>
     </div>
@@ -58,7 +58,7 @@ const Homepage = ({cart, addToCart }) => {
 
     <Link to="/puma">
     <div className={styles.brandCard}>
-      <img src="/public/image.png" alt="Puma" />
+      <img src="/Images/image.png" alt="Puma" />
       <h3 className={styles.pairs}>Puma</h3>
       <Link to="/puma"><button className={styles.shopNow2}>Shop Now</button> </Link>
     </div>
@@ -77,7 +77,7 @@ const Homepage = ({cart, addToCart }) => {
     loop
     muted
   >
-    <source src="/public/Nike Japan’s Air Max Day (2022) - Nike Careers Our Stories (1080p, h264).mp4" type="video/mp4" />
+    <source src="public/Images/Nike Japan’s Air Max Day (2022) - Nike Careers Our Stories (1080p, h264).mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>

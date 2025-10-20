@@ -5,6 +5,7 @@ const backendUrl = import.meta.env.VITE_BACKENDURL
 
 const Puma = ({cart, addToCart}) => {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const category = "Puma"; // Make dynamic if needed
 
   useEffect(() => {
@@ -14,24 +15,32 @@ const Puma = ({cart, addToCart}) => {
       .catch((err) => console.error("Error fetching category products:", err));
   }, [category]);
 
+    const filteredProducts = products.filter((item) =>
+    item.Product.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+
   return (
     <div className={styles.nike_container}>
-      <NavBar cart={cart}/>
+      <NavBar cart={cart} searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
       <h1 className={styles.nike_title}>{category} Products</h1>
       <div className={styles.product_scroll_container}>
-        {products.map((item) => (
-          <div className={styles.product_card} key={item._id}>
-            <img src={item.Image} alt={item.Product} className={styles.product_image} />
-            <h3 className={styles.product_name}>{item.Product}</h3>
-            <p className={styles.product_price}>R {item.Price}</p>
-            <button
-            className={styles.add_to_cart_button}
-            onClick={() => addToCart(item)}
-            >
-            Add to Cart
-            </button>
-          </div>
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((item) => (
+            <div className={styles.product_card} key={item._id}>
+              <img src={item.Image} alt={item.Product} className={styles.product_image} />
+              <h3 className={styles.product_name}>{item.Product}</h3>
+              <p className={styles.product_price}>R {item.Price}</p>
+              <button
+                className={styles.add_to_cart_button}
+                onClick={() => addToCart(item)}
+              >
+                Add to Cart
+              </button>
+            </div>
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
       </div>
     </div>
   );

@@ -60,7 +60,7 @@ const NavBar = ({ cart = [], searchQuery, setSearchQuery }) => {
       <Link to="/homepage">
         <div className={styles.nav_left}>
           <img
-            src="/public/shoe-sneaker-footwear-vector-illustration_776624-288.avif"
+            src="/Images/shoe-sneaker-footwear-vector-illustration_776624-288.avif"
             alt="logo"
             className={styles.logo}
           />
