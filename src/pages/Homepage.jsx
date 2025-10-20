@@ -77,7 +77,7 @@ const Homepage = ({cart, addToCart }) => {
     loop
     muted
   >
-    <source src="public/Images/Nike Japan’s Air Max Day (2022) - Nike Careers Our Stories (1080p, h264).mp4" type="video/mp4" />
+    <source src="/Images/Nike Japan’s Air Max Day (2022) - Nike Careers Our Stories (1080p, h264).mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 </div>
